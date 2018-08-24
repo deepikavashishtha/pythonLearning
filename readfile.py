@@ -1,10 +1,13 @@
 def readfile(fileName):
-	f = open(fileName, "r")
-	myList = []
-	for line in f:
-		myList.append(line)
-	print(myList)
-	f.close()
+	try:
+		f = open(fileName, "r")
+		myList = []
+		for line in f:
+			myList.append(line)
+		print(myList)
+		f.close()
+	except Exception:
+        	print("cant read the file")
 	return
 
 def main():
